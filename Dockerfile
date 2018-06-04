@@ -15,9 +15,8 @@ RUN chown -R user:user /app
 
 USER user
 
-RUN pip install -r requirements.txt
+RUN pip install --user -r requirements.txt
 
-ENTRYPOINT ["python", "app.py"]
 ENTRYPOINT ["/home/user/.local/bin/gunicorn", "--access-logfile=-", "--workers=2", "--bind=0.0.0.0:8000", "app:app"]
 
 EXPOSE 8000

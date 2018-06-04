@@ -1,4 +1,4 @@
-ROOT_DIR := docker-smtp-relay
+ROOT_DIR := docker-smtp-rest-relay
 IP 		:= 1.1.1.1
 
 help: ## Show this help message (default)]
